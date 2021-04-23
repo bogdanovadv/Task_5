@@ -4,7 +4,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-news_api_token = "51f3bc1ce6384971b2e00b29d92c5e98"
+news_api_token = ""
+host = '127.0.0.1'
+port = 8080
 
 def new_db():
     sql_req('''CREATE TABLE IF NOT EXISTS users
@@ -112,4 +114,4 @@ def news():
             return top_headlines
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host=host, port=port)
