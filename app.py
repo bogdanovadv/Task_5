@@ -53,10 +53,6 @@ def sql_req_ans(query):
         return set_q
 
 
-@app.route('/about')
-def about():
-    return 'About me'
-
 @app.route('/users', methods=['POST'])
 def users():
     if request.method == 'POST':
